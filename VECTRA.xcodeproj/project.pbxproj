@@ -1,0 +1,684 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02269E1102AED491FD3AACBE /* GuidanceToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9A6FD6EF3E2F6023F61B38 /* GuidanceToast.swift */; };
+		059962F1242B808EF0C8938C /* NonLiDARPipeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363E464733ACD2777BD016B0 /* NonLiDARPipeline.swift */; };
+		05C7795068D72FC867CAA4BC /* DeviceCapabilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFFF331B3819C1AAB7AC0F9 /* DeviceCapabilities.swift */; };
+		080D92CCC7DEB851EB483F8D /* ReconstructionEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA256F2D2C80694CE21ECD52 /* ReconstructionEngine.swift */; };
+		0A465E6E916AD263BB926D7F /* BottomControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E10329C4CBB079D7EDE00C9 /* BottomControlPanel.swift */; };
+		0C682B2F8BA9C4F37BDE7071 /* CoverageAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175816AEE86F2611FB3714A0 /* CoverageAnalyzer.swift */; };
+		0F22A1C72CC434B0FBDC0DC4 /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A896B304C75A75937922616 /* CameraManager.swift */; };
+		10DD24A8515C3D240B7F5DDF /* MultiCameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251F8170627D488C9BDB2E3E /* MultiCameraManager.swift */; };
+		11A7D029CE7A82C24E1E024E /* ScanDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9A82CEC008EACD39E912E4 /* ScanDetailView.swift */; };
+		1B547975AC4B00367D547EA6 /* TopStatusIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCE3B3FC845FDCBD95051D9 /* TopStatusIndicator.swift */; };
+		1CCB684F0FB32D31F6E179DF /* SensorModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9244D9D5C999913A1F64927 /* SensorModels.swift */; };
+		26F6538C1D75C1444AF47871 /* ObjectDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EF01A7E76552A4936A2D44 /* ObjectDetector.swift */; };
+		27A087A465C7CE3D9F73BA3C /* SensorPipeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D8612E08A37326753349A /* SensorPipeline.swift */; };
+		2D403AF35243EB36D37A0F80 /* ModelOptimizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6980CB193F6A15915B24358 /* ModelOptimizationManager.swift */; };
+		30FFEDB50092179CB2E6D95D /* ReconstructionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6E7411CC164766D41B23F4 /* ReconstructionManager.swift */; };
+		38F65D248DFE66312C808D4A /* SpatialExtentEstimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121D245F6231D576BE0F3933 /* SpatialExtentEstimator.swift */; };
+		3A63E6D5D0E56EA80851221E /* AIDiagnosticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA3C6A88C3F49EA9AE431B6 /* AIDiagnosticsView.swift */; };
+		3C37EB4B116D6FF0FCA30567 /* ProcessingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4F462FFB37BF189B28093D /* ProcessingView.swift */; };
+		42850018A29DF66855B53002 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35436C7E17E0EBB2637B56CC /* LibraryView.swift */; };
+		454611C166FCD30DFC2CBDC4 /* ScanReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC82EAFFC2E07B4AFC12D569 /* ScanReviewView.swift */; };
+		472C424A92A53AE46CE5559E /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06C5513B9024CA9DD96A99C /* Logger.swift */; };
+		4AC7FD1992332A623BF62514 /* LiDARProPipeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704357BD85569AB4BADD48D9 /* LiDARProPipeline.swift */; };
+		4D3AC7D10A9880E64CABE941 /* AdaptiveReconstructionEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691742F2DC64A4C07A570A20 /* AdaptiveReconstructionEngine.swift */; };
+		5B05A4816CD78603391EA37B /* IntelligentViewpointPlanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD47135E8DBC2C13072ABED0 /* IntelligentViewpointPlanner.swift */; };
+		65C8FC102DF3376EDAF5A5FE /* PhotogrammetryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8EB840BE10301EC8AAF3B1 /* PhotogrammetryManager.swift */; };
+		66848C200113F73DB444C58C /* StatusDropdownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692AABC765642208C66EBADD /* StatusDropdownButton.swift */; };
+		6766E32BBD4E74121B2D8D42 /* ScanLibraryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A83F87CC99258DCD4D2A9A /* ScanLibraryStore.swift */; };
+		67843DDE824C5F0B3BBD9495 /* SpatialIntelligenceEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5EF98DB244D940934C622D /* SpatialIntelligenceEngine.swift */; };
+		6D07D72D2ADCB11516D7A8DA /* ScanGuidanceOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6AEA6D64C7DB772FEFF051 /* ScanGuidanceOverlay.swift */; };
+		7296322D5AB21D52613F61AB /* ScanFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3120B38DC6514909C6B255E /* ScanFrame.swift */; };
+		7B15AB4048F20D0C6E90E0B7 /* VectraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B57C163C97FF23B10584B83 /* VectraApp.swift */; };
+		7C65F41F7B411FA0B0842751 /* HardwareCapabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577470B87DE3A50911069E8F /* HardwareCapabilityManager.swift */; };
+		80E791AC8F803D4EE513C5E9 /* FrameSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660E42370123E3E88B0DF1AD /* FrameSelector.swift */; };
+		8494B3B3DC5EDAFE4EDB52AE /* WeakRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF32291D8F7A261592EF033 /* WeakRegion.swift */; };
+		8682032CC45573B7E085AB4D /* ScanCompletionEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7B00990001221B088FEA7F /* ScanCompletionEngine.swift */; };
+		897A2BE3034CCAD140CC3840 /* ModelDifferenceEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE822A5B4A179FFECB097981 /* ModelDifferenceEngine.swift */; };
+		8CF08B0824480954826EBB74 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3DF12110CF41AD37A11EB9 /* HomeView.swift */; };
+		90A9ACE2F5B18AF612CD56E6 /* ARTrackingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A9A6B18DE7EEA10F16C367 /* ARTrackingManager.swift */; };
+		9D03FCC7FD85970412A5E5B8 /* PrecisionMeasurementEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B177D4F6303C0EF5582E19 /* PrecisionMeasurementEngine.swift */; };
+		9D11453744C3CACF811863C3 /* MeshAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A1EE2E4CDED8001FD3F4F0 /* MeshAnalyzer.swift */; };
+		AE1F42A196BD65B8D36FF2F7 /* SensorDiagnosticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C263F6A6C0E8E188406355 /* SensorDiagnosticsView.swift */; };
+		BA859BB8B307E5469217A6B5 /* VideoCaptureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0216CFD0FCA154132B4C0EB4 /* VideoCaptureManager.swift */; };
+		BF15A0D2F22CD2360C3B5150 /* AIObjectDetectionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631859EE3AA9C9C4CA519B75 /* AIObjectDetectionCard.swift */; };
+		C1C022CFE1F8C5E47C197183 /* QualityDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDF1E9D94646E8ED5761ED3 /* QualityDashboardView.swift */; };
+		C2E70C482DB531C53B5A820A /* ScanState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A3983C4127954D26D2582A /* ScanState.swift */; };
+		C3E203E968BBE1632E27DAF7 /* BenchmarkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E878584C32A38C2E68EA10B /* BenchmarkManager.swift */; };
+		C4DA723C35434E4E1F18180C /* ModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20A4E8EE3E227409719F89D /* ModelView.swift */; };
+		C7157B62BD2223DCFFB13E86 /* SemanticMeasurementEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F526A0771DF91C6FB8C355 /* SemanticMeasurementEngine.swift */; };
+		CF6D233C6724E269DB937442 /* QualityReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471811FD2C49A069B7E69CA0 /* QualityReviewView.swift */; };
+		D38527934AFAB3F1827475FD /* ReticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66308C7801B1407034703000 /* ReticleView.swift */; };
+		DE14EA124751CE0C08AC35A4 /* ARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15CF6560C3EDF774350E903 /* ARViewContainer.swift */; };
+		E239C6402B05986C0883EB31 /* ReconstructionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E318C7C0DB8F94A997B6C851 /* ReconstructionResult.swift */; };
+		E5FBA29D1BF235866FBC2927 /* ExportManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D0B36837BE2E5854F636B3 /* ExportManager.swift */; };
+		E7135889B0B5D366791957B3 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C1160C554A80543B822872 /* SettingsView.swift */; };
+		E8A52169E5B1364859276880 /* ScanPlanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB767E70576EEF532C94824 /* ScanPlanner.swift */; };
+		F2B71A063C87CE1D44D229D1 /* SensorFusionEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A63032897F962489905F8D /* SensorFusionEngine.swift */; };
+		F824D967CA73F204C2D0F890 /* ModelViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC284446C600C1F1EC0D105E /* ModelViewer.swift */; };
+		FAA383C47171220AB40C4702 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05A56F5070065B89C57A97E /* ScanView.swift */; };
+		FF8F5F862DF85B566FB3543D /* PerformanceDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B81773B5F926CA8DD363DE6 /* PerformanceDashboardView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		01A83F87CC99258DCD4D2A9A /* ScanLibraryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanLibraryStore.swift; sourceTree = "<group>"; };
+		0216CFD0FCA154132B4C0EB4 /* VideoCaptureManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCaptureManager.swift; sourceTree = "<group>"; };
+		02A63032897F962489905F8D /* SensorFusionEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorFusionEngine.swift; sourceTree = "<group>"; };
+		02EF01A7E76552A4936A2D44 /* ObjectDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetector.swift; sourceTree = "<group>"; };
+		121D245F6231D576BE0F3933 /* SpatialExtentEstimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpatialExtentEstimator.swift; sourceTree = "<group>"; };
+		175816AEE86F2611FB3714A0 /* CoverageAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverageAnalyzer.swift; sourceTree = "<group>"; };
+		1E9A6FD6EF3E2F6023F61B38 /* GuidanceToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidanceToast.swift; sourceTree = "<group>"; };
+		251F8170627D488C9BDB2E3E /* MultiCameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiCameraManager.swift; sourceTree = "<group>"; };
+		26A1EE2E4CDED8001FD3F4F0 /* MeshAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeshAnalyzer.swift; sourceTree = "<group>"; };
+		28B177D4F6303C0EF5582E19 /* PrecisionMeasurementEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrecisionMeasurementEngine.swift; sourceTree = "<group>"; };
+		2A6AEA6D64C7DB772FEFF051 /* ScanGuidanceOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanGuidanceOverlay.swift; sourceTree = "<group>"; };
+		2A896B304C75A75937922616 /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
+		2EA3C6A88C3F49EA9AE431B6 /* AIDiagnosticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIDiagnosticsView.swift; sourceTree = "<group>"; };
+		35436C7E17E0EBB2637B56CC /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
+		363E464733ACD2777BD016B0 /* NonLiDARPipeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonLiDARPipeline.swift; sourceTree = "<group>"; };
+		3B81773B5F926CA8DD363DE6 /* PerformanceDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceDashboardView.swift; sourceTree = "<group>"; };
+		471811FD2C49A069B7E69CA0 /* QualityReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QualityReviewView.swift; sourceTree = "<group>"; };
+		48D0B36837BE2E5854F636B3 /* ExportManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportManager.swift; sourceTree = "<group>"; };
+		4A4F462FFB37BF189B28093D /* ProcessingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessingView.swift; sourceTree = "<group>"; };
+		4E878584C32A38C2E68EA10B /* BenchmarkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenchmarkManager.swift; sourceTree = "<group>"; };
+		577470B87DE3A50911069E8F /* HardwareCapabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardwareCapabilityManager.swift; sourceTree = "<group>"; };
+		59C1160C554A80543B822872 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		5B57C163C97FF23B10584B83 /* VectraApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VectraApp.swift; sourceTree = "<group>"; };
+		5CCE3B3FC845FDCBD95051D9 /* TopStatusIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStatusIndicator.swift; sourceTree = "<group>"; };
+		5E10329C4CBB079D7EDE00C9 /* BottomControlPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomControlPanel.swift; sourceTree = "<group>"; };
+		631859EE3AA9C9C4CA519B75 /* AIObjectDetectionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIObjectDetectionCard.swift; sourceTree = "<group>"; };
+		660E42370123E3E88B0DF1AD /* FrameSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameSelector.swift; sourceTree = "<group>"; };
+		66308C7801B1407034703000 /* ReticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReticleView.swift; sourceTree = "<group>"; };
+		691742F2DC64A4C07A570A20 /* AdaptiveReconstructionEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveReconstructionEngine.swift; sourceTree = "<group>"; };
+		692AABC765642208C66EBADD /* StatusDropdownButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusDropdownButton.swift; sourceTree = "<group>"; };
+		69F526A0771DF91C6FB8C355 /* SemanticMeasurementEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemanticMeasurementEngine.swift; sourceTree = "<group>"; };
+		6B3DF12110CF41AD37A11EB9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		6BDF1E9D94646E8ED5761ED3 /* QualityDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QualityDashboardView.swift; sourceTree = "<group>"; };
+		704357BD85569AB4BADD48D9 /* LiDARProPipeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiDARProPipeline.swift; sourceTree = "<group>"; };
+		7A5EF98DB244D940934C622D /* SpatialIntelligenceEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpatialIntelligenceEngine.swift; sourceTree = "<group>"; };
+		84C263F6A6C0E8E188406355 /* SensorDiagnosticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorDiagnosticsView.swift; sourceTree = "<group>"; };
+		A05A56F5070065B89C57A97E /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
+		AC82EAFFC2E07B4AFC12D569 /* ScanReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanReviewView.swift; sourceTree = "<group>"; };
+		BBF32291D8F7A261592EF033 /* WeakRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakRegion.swift; sourceTree = "<group>"; };
+		BC284446C600C1F1EC0D105E /* ModelViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelViewer.swift; sourceTree = "<group>"; };
+		C7C5CD15F3FE350F19ADD69E /* VECTRA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VECTRA.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C86D8612E08A37326753349A /* SensorPipeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorPipeline.swift; sourceTree = "<group>"; };
+		CD6E7411CC164766D41B23F4 /* ReconstructionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReconstructionManager.swift; sourceTree = "<group>"; };
+		CFB767E70576EEF532C94824 /* ScanPlanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanPlanner.swift; sourceTree = "<group>"; };
+		D06C5513B9024CA9DD96A99C /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		D3120B38DC6514909C6B255E /* ScanFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanFrame.swift; sourceTree = "<group>"; };
+		DB7B00990001221B088FEA7F /* ScanCompletionEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanCompletionEngine.swift; sourceTree = "<group>"; };
+		DD8EB840BE10301EC8AAF3B1 /* PhotogrammetryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotogrammetryManager.swift; sourceTree = "<group>"; };
+		DFFFF331B3819C1AAB7AC0F9 /* DeviceCapabilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceCapabilities.swift; sourceTree = "<group>"; };
+		E15CF6560C3EDF774350E903 /* ARViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewContainer.swift; sourceTree = "<group>"; };
+		E318C7C0DB8F94A997B6C851 /* ReconstructionResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReconstructionResult.swift; sourceTree = "<group>"; };
+		E6A9A6B18DE7EEA10F16C367 /* ARTrackingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARTrackingManager.swift; sourceTree = "<group>"; };
+		E9A3983C4127954D26D2582A /* ScanState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanState.swift; sourceTree = "<group>"; };
+		EA256F2D2C80694CE21ECD52 /* ReconstructionEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReconstructionEngine.swift; sourceTree = "<group>"; };
+		ED9A82CEC008EACD39E912E4 /* ScanDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanDetailView.swift; sourceTree = "<group>"; };
+		F20A4E8EE3E227409719F89D /* ModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelView.swift; sourceTree = "<group>"; };
+		F6980CB193F6A15915B24358 /* ModelOptimizationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelOptimizationManager.swift; sourceTree = "<group>"; };
+		F9244D9D5C999913A1F64927 /* SensorModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorModels.swift; sourceTree = "<group>"; };
+		FD47135E8DBC2C13072ABED0 /* IntelligentViewpointPlanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntelligentViewpointPlanner.swift; sourceTree = "<group>"; };
+		FE822A5B4A179FFECB097981 /* ModelDifferenceEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDifferenceEngine.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		02807440281FF074B09C1536 /* Diagnostics */ = {
+			isa = PBXGroup;
+			children = (
+				D06C5513B9024CA9DD96A99C /* Logger.swift */,
+			);
+			path = Diagnostics;
+			sourceTree = "<group>";
+		};
+		0860796F029E90902C9E47AD /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2EA3C6A88C3F49EA9AE431B6 /* AIDiagnosticsView.swift */,
+				631859EE3AA9C9C4CA519B75 /* AIObjectDetectionCard.swift */,
+				E15CF6560C3EDF774350E903 /* ARViewContainer.swift */,
+				5E10329C4CBB079D7EDE00C9 /* BottomControlPanel.swift */,
+				1E9A6FD6EF3E2F6023F61B38 /* GuidanceToast.swift */,
+				3B81773B5F926CA8DD363DE6 /* PerformanceDashboardView.swift */,
+				6BDF1E9D94646E8ED5761ED3 /* QualityDashboardView.swift */,
+				471811FD2C49A069B7E69CA0 /* QualityReviewView.swift */,
+				66308C7801B1407034703000 /* ReticleView.swift */,
+				2A6AEA6D64C7DB772FEFF051 /* ScanGuidanceOverlay.swift */,
+				84C263F6A6C0E8E188406355 /* SensorDiagnosticsView.swift */,
+				692AABC765642208C66EBADD /* StatusDropdownButton.swift */,
+				5CCE3B3FC845FDCBD95051D9 /* TopStatusIndicator.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		2A903F56938148C47E04BFDB /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				BA3E379F121D5581E16A8EEF /* AI */,
+				B0F3327ACACE12AE696D9309 /* Analysis */,
+				A02BA1E65E409D5C0688CEFC /* Benchmarking */,
+				02807440281FF074B09C1536 /* Diagnostics */,
+				F93A875C367AA3E20D1C2E2E /* Intelligence */,
+				3EB68DDDF5642EA7B7CB35E5 /* IntelligentCapture */,
+				75B90B15FB4402BE965EFB13 /* Measurement */,
+				33BCD012C6A594DBCE14EF74 /* Model */,
+				995752897BAA90B27E913D01 /* Models */,
+				588305DBE84B63F6BDF1CA77 /* Reconstruction */,
+				A72E14133E2DD44249F1CDB6 /* SensorFusion */,
+				A38A1C46A36586B087378793 /* State */,
+				53A43F32F959717115676BE0 /* Utilities */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		33BCD012C6A594DBCE14EF74 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F6980CB193F6A15915B24358 /* ModelOptimizationManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3EB68DDDF5642EA7B7CB35E5 /* IntelligentCapture */ = {
+			isa = PBXGroup;
+			children = (
+				175816AEE86F2611FB3714A0 /* CoverageAnalyzer.swift */,
+				02EF01A7E76552A4936A2D44 /* ObjectDetector.swift */,
+				CFB767E70576EEF532C94824 /* ScanPlanner.swift */,
+				121D245F6231D576BE0F3933 /* SpatialExtentEstimator.swift */,
+			);
+			path = IntelligentCapture;
+			sourceTree = "<group>";
+		};
+		4412379127D069E8BBB64EA3 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				2A896B304C75A75937922616 /* CameraManager.swift */,
+				660E42370123E3E88B0DF1AD /* FrameSelector.swift */,
+				0216CFD0FCA154132B4C0EB4 /* VideoCaptureManager.swift */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		448CDFFDAC5E9F420F5ECA07 /* Measurement */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Measurement;
+			sourceTree = "<group>";
+		};
+		4A33485DB0DD684E26AAAE42 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				6B3DF12110CF41AD37A11EB9 /* HomeView.swift */,
+				35436C7E17E0EBB2637B56CC /* LibraryView.swift */,
+				F20A4E8EE3E227409719F89D /* ModelView.swift */,
+				4A4F462FFB37BF189B28093D /* ProcessingView.swift */,
+				ED9A82CEC008EACD39E912E4 /* ScanDetailView.swift */,
+				AC82EAFFC2E07B4AFC12D569 /* ScanReviewView.swift */,
+				A05A56F5070065B89C57A97E /* ScanView.swift */,
+				59C1160C554A80543B822872 /* SettingsView.swift */,
+				0860796F029E90902C9E47AD /* Components */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		53A43F32F959717115676BE0 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				577470B87DE3A50911069E8F /* HardwareCapabilityManager.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		588305DBE84B63F6BDF1CA77 /* Reconstruction */ = {
+			isa = PBXGroup;
+			children = (
+				691742F2DC64A4C07A570A20 /* AdaptiveReconstructionEngine.swift */,
+				26A1EE2E4CDED8001FD3F4F0 /* MeshAnalyzer.swift */,
+			);
+			path = Reconstruction;
+			sourceTree = "<group>";
+		};
+		75B90B15FB4402BE965EFB13 /* Measurement */ = {
+			isa = PBXGroup;
+			children = (
+				28B177D4F6303C0EF5582E19 /* PrecisionMeasurementEngine.swift */,
+			);
+			path = Measurement;
+			sourceTree = "<group>";
+		};
+		7F0AEFCE84C496DBF536EA6F /* Viewer */ = {
+			isa = PBXGroup;
+			children = (
+				BC284446C600C1F1EC0D105E /* ModelViewer.swift */,
+			);
+			path = Viewer;
+			sourceTree = "<group>";
+		};
+		88799A2EF3C65F601B047887 /* App */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		995752897BAA90B27E913D01 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DFFFF331B3819C1AAB7AC0F9 /* DeviceCapabilities.swift */,
+				D3120B38DC6514909C6B255E /* ScanFrame.swift */,
+				BBF32291D8F7A261592EF033 /* WeakRegion.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A02BA1E65E409D5C0688CEFC /* Benchmarking */ = {
+			isa = PBXGroup;
+			children = (
+				4E878584C32A38C2E68EA10B /* BenchmarkManager.swift */,
+			);
+			path = Benchmarking;
+			sourceTree = "<group>";
+		};
+		A38A1C46A36586B087378793 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				01A83F87CC99258DCD4D2A9A /* ScanLibraryStore.swift */,
+				E9A3983C4127954D26D2582A /* ScanState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		A72E14133E2DD44249F1CDB6 /* SensorFusion */ = {
+			isa = PBXGroup;
+			children = (
+				704357BD85569AB4BADD48D9 /* LiDARProPipeline.swift */,
+				251F8170627D488C9BDB2E3E /* MultiCameraManager.swift */,
+				363E464733ACD2777BD016B0 /* NonLiDARPipeline.swift */,
+				02A63032897F962489905F8D /* SensorFusionEngine.swift */,
+				F9244D9D5C999913A1F64927 /* SensorModels.swift */,
+				C86D8612E08A37326753349A /* SensorPipeline.swift */,
+			);
+			path = SensorFusion;
+			sourceTree = "<group>";
+		};
+		B0F3327ACACE12AE696D9309 /* Analysis */ = {
+			isa = PBXGroup;
+			children = (
+				FE822A5B4A179FFECB097981 /* ModelDifferenceEngine.swift */,
+			);
+			path = Analysis;
+			sourceTree = "<group>";
+		};
+		BA3E379F121D5581E16A8EEF /* AI */ = {
+			isa = PBXGroup;
+			children = (
+				FD47135E8DBC2C13072ABED0 /* IntelligentViewpointPlanner.swift */,
+				DB7B00990001221B088FEA7F /* ScanCompletionEngine.swift */,
+				7A5EF98DB244D940934C622D /* SpatialIntelligenceEngine.swift */,
+			);
+			path = AI;
+			sourceTree = "<group>";
+		};
+		DBD1F298A792A18DE6859BAF = {
+			isa = PBXGroup;
+			children = (
+				5B57C163C97FF23B10584B83 /* VectraApp.swift */,
+				88799A2EF3C65F601B047887 /* App */,
+				E0982708F2E5ED93A52F570F /* AR */,
+				4412379127D069E8BBB64EA3 /* Camera */,
+				2A903F56938148C47E04BFDB /* Core */,
+				F1025AD5B6107A3324F8E3BC /* Export */,
+				448CDFFDAC5E9F420F5ECA07 /* Measurement */,
+				DF012B1E9085022634A9A1E1 /* Reconstruction */,
+				4A33485DB0DD684E26AAAE42 /* UI */,
+				7F0AEFCE84C496DBF536EA6F /* Viewer */,
+				F57F787F4948D4AC97FB3B72 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DF012B1E9085022634A9A1E1 /* Reconstruction */ = {
+			isa = PBXGroup;
+			children = (
+				DD8EB840BE10301EC8AAF3B1 /* PhotogrammetryManager.swift */,
+				EA256F2D2C80694CE21ECD52 /* ReconstructionEngine.swift */,
+				CD6E7411CC164766D41B23F4 /* ReconstructionManager.swift */,
+				E318C7C0DB8F94A997B6C851 /* ReconstructionResult.swift */,
+			);
+			path = Reconstruction;
+			sourceTree = "<group>";
+		};
+		E0982708F2E5ED93A52F570F /* AR */ = {
+			isa = PBXGroup;
+			children = (
+				E6A9A6B18DE7EEA10F16C367 /* ARTrackingManager.swift */,
+			);
+			path = AR;
+			sourceTree = "<group>";
+		};
+		F1025AD5B6107A3324F8E3BC /* Export */ = {
+			isa = PBXGroup;
+			children = (
+				48D0B36837BE2E5854F636B3 /* ExportManager.swift */,
+			);
+			path = Export;
+			sourceTree = "<group>";
+		};
+		F57F787F4948D4AC97FB3B72 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C7C5CD15F3FE350F19ADD69E /* VECTRA.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F93A875C367AA3E20D1C2E2E /* Intelligence */ = {
+			isa = PBXGroup;
+			children = (
+				69F526A0771DF91C6FB8C355 /* SemanticMeasurementEngine.swift */,
+			);
+			path = Intelligence;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		361DE14304B5C357EABC3911 /* VECTRA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B51DA73BA2A55A5F76403517 /* Build configuration list for PBXNativeTarget "VECTRA" */;
+			buildPhases = (
+				CBCD0B2AF8E49B5C0C891A7A /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VECTRA;
+			productName = VECTRA;
+			productReference = C7C5CD15F3FE350F19ADD69E /* VECTRA.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EBEBA33FDCA060011300527D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+			};
+			buildConfigurationList = 7FA4A7FF358EC8BC76273CF8 /* Build configuration list for PBXProject "VECTRA" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = DBD1F298A792A18DE6859BAF;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				361DE14304B5C357EABC3911 /* VECTRA */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CBCD0B2AF8E49B5C0C891A7A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A63E6D5D0E56EA80851221E /* AIDiagnosticsView.swift in Sources */,
+				BF15A0D2F22CD2360C3B5150 /* AIObjectDetectionCard.swift in Sources */,
+				90A9ACE2F5B18AF612CD56E6 /* ARTrackingManager.swift in Sources */,
+				DE14EA124751CE0C08AC35A4 /* ARViewContainer.swift in Sources */,
+				4D3AC7D10A9880E64CABE941 /* AdaptiveReconstructionEngine.swift in Sources */,
+				C3E203E968BBE1632E27DAF7 /* BenchmarkManager.swift in Sources */,
+				0A465E6E916AD263BB926D7F /* BottomControlPanel.swift in Sources */,
+				0F22A1C72CC434B0FBDC0DC4 /* CameraManager.swift in Sources */,
+				0C682B2F8BA9C4F37BDE7071 /* CoverageAnalyzer.swift in Sources */,
+				05C7795068D72FC867CAA4BC /* DeviceCapabilities.swift in Sources */,
+				E5FBA29D1BF235866FBC2927 /* ExportManager.swift in Sources */,
+				80E791AC8F803D4EE513C5E9 /* FrameSelector.swift in Sources */,
+				02269E1102AED491FD3AACBE /* GuidanceToast.swift in Sources */,
+				7C65F41F7B411FA0B0842751 /* HardwareCapabilityManager.swift in Sources */,
+				8CF08B0824480954826EBB74 /* HomeView.swift in Sources */,
+				5B05A4816CD78603391EA37B /* IntelligentViewpointPlanner.swift in Sources */,
+				4AC7FD1992332A623BF62514 /* LiDARProPipeline.swift in Sources */,
+				42850018A29DF66855B53002 /* LibraryView.swift in Sources */,
+				472C424A92A53AE46CE5559E /* Logger.swift in Sources */,
+				9D11453744C3CACF811863C3 /* MeshAnalyzer.swift in Sources */,
+				897A2BE3034CCAD140CC3840 /* ModelDifferenceEngine.swift in Sources */,
+				2D403AF35243EB36D37A0F80 /* ModelOptimizationManager.swift in Sources */,
+				C4DA723C35434E4E1F18180C /* ModelView.swift in Sources */,
+				F824D967CA73F204C2D0F890 /* ModelViewer.swift in Sources */,
+				10DD24A8515C3D240B7F5DDF /* MultiCameraManager.swift in Sources */,
+				059962F1242B808EF0C8938C /* NonLiDARPipeline.swift in Sources */,
+				26F6538C1D75C1444AF47871 /* ObjectDetector.swift in Sources */,
+				FF8F5F862DF85B566FB3543D /* PerformanceDashboardView.swift in Sources */,
+				65C8FC102DF3376EDAF5A5FE /* PhotogrammetryManager.swift in Sources */,
+				9D03FCC7FD85970412A5E5B8 /* PrecisionMeasurementEngine.swift in Sources */,
+				3C37EB4B116D6FF0FCA30567 /* ProcessingView.swift in Sources */,
+				C1C022CFE1F8C5E47C197183 /* QualityDashboardView.swift in Sources */,
+				CF6D233C6724E269DB937442 /* QualityReviewView.swift in Sources */,
+				080D92CCC7DEB851EB483F8D /* ReconstructionEngine.swift in Sources */,
+				30FFEDB50092179CB2E6D95D /* ReconstructionManager.swift in Sources */,
+				E239C6402B05986C0883EB31 /* ReconstructionResult.swift in Sources */,
+				D38527934AFAB3F1827475FD /* ReticleView.swift in Sources */,
+				8682032CC45573B7E085AB4D /* ScanCompletionEngine.swift in Sources */,
+				11A7D029CE7A82C24E1E024E /* ScanDetailView.swift in Sources */,
+				7296322D5AB21D52613F61AB /* ScanFrame.swift in Sources */,
+				6D07D72D2ADCB11516D7A8DA /* ScanGuidanceOverlay.swift in Sources */,
+				6766E32BBD4E74121B2D8D42 /* ScanLibraryStore.swift in Sources */,
+				E8A52169E5B1364859276880 /* ScanPlanner.swift in Sources */,
+				454611C166FCD30DFC2CBDC4 /* ScanReviewView.swift in Sources */,
+				C2E70C482DB531C53B5A820A /* ScanState.swift in Sources */,
+				FAA383C47171220AB40C4702 /* ScanView.swift in Sources */,
+				C7157B62BD2223DCFFB13E86 /* SemanticMeasurementEngine.swift in Sources */,
+				AE1F42A196BD65B8D36FF2F7 /* SensorDiagnosticsView.swift in Sources */,
+				F2B71A063C87CE1D44D229D1 /* SensorFusionEngine.swift in Sources */,
+				1CCB684F0FB32D31F6E179DF /* SensorModels.swift in Sources */,
+				27A087A465C7CE3D9F73BA3C /* SensorPipeline.swift in Sources */,
+				E7135889B0B5D366791957B3 /* SettingsView.swift in Sources */,
+				38F65D248DFE66312C808D4A /* SpatialExtentEstimator.swift in Sources */,
+				67843DDE824C5F0B3BBD9495 /* SpatialIntelligenceEngine.swift in Sources */,
+				66848C200113F73DB444C58C /* StatusDropdownButton.swift in Sources */,
+				1B547975AC4B00367D547EA6 /* TopStatusIndicator.swift in Sources */,
+				7B15AB4048F20D0C6E90E0B7 /* VectraApp.swift in Sources */,
+				BA859BB8B307E5469217A6B5 /* VideoCaptureManager.swift in Sources */,
+				8494B3B3DC5EDAFE4EDB52AE /* WeakRegion.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		49A4530AC25D4FB9A3BBEB3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		C27E32EA72AFB5F265244C55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = CZZD565JF3;
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.VECTRA;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ED65EED3013947AE4473A593 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = CZZD565JF3;
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.VECTRA;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F221250FA22A4F5C4E621B02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7FA4A7FF358EC8BC76273CF8 /* Build configuration list for PBXProject "VECTRA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F221250FA22A4F5C4E621B02 /* Debug */,
+				49A4530AC25D4FB9A3BBEB3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B51DA73BA2A55A5F76403517 /* Build configuration list for PBXNativeTarget "VECTRA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C27E32EA72AFB5F265244C55 /* Debug */,
+				ED65EED3013947AE4473A593 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EBEBA33FDCA060011300527D /* Project object */;
+}

@@ -1,0 +1,26 @@
+name: VECTRA
+options:
+  bundleIdPrefix: com.example
+targets:
+  VECTRA:
+    type: application
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - App
+      - Core
+      - Camera
+      - AR
+      - Reconstruction
+      - Viewer
+      - Measurement
+      - Export
+      - UI
+      - VectraApp.swift
+    info:
+      path: Info.plist
+      properties:
+        UILaunchScreen: {}
+        NSCameraUsageDescription: "VECTRA requires camera access for 3D scanning."
+        NSPhotoLibraryAddUsageDescription: "VECTRA requires access to save 3D models."
+        NSMicrophoneUsageDescription: "VECTRA requires microphone access to record video."
