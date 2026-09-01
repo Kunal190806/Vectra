@@ -6,6 +6,10 @@ struct LibraryView: View {
     @State private var selectedEntry: ScanEntry? = nil
     @State private var previewURL: URL? = nil
 
+    @State private var scanToRename: ScanEntry? = nil
+    @State private var newScanName: String = ""
+    @State private var showInvalidFileAlert = false
+
     var body: some View {
         NavigationView {
             ZStack {
@@ -20,6 +24,28 @@ struct LibraryView: View {
             .navigationTitle("Scan Library")
             .navigationBarTitleDisplayMode(.large)
             .toolbarColorScheme(.dark, for: .navigationBar)
+            .alert("Rename Scan", isPresented: Binding(
+                get: { scanToRename != nil },
+                set: { if !$0 { scanToRename = nil } }
+            )) {
+                TextField("Name", text: $newScanName)
+                Button("Cancel", role: .cancel) {
+                    scanToRename = nil
+                }
+                Button("Save") {
+                    if let entry = scanToRename, !newScanName.trimmingCharacters(in: .whitespaces).isEmpty {
+                        store.rename(entry: entry, to: newScanName)
+                    }
+                    scanToRename = nil
+                }
+            } message: {
+                Text("Enter a new name for this scan.")
+            }
+            .alert("Invalid Model", isPresented: $showInvalidFileAlert) {
+                Button("OK", role: .cancel) { }
+            } message: {
+                Text("This scan contains no actual 3D data. This usually happens when scanning on an unsupported device or simulator.")
+            }
         }
         .quickLookPreview($previewURL)
     }
@@ -50,7 +76,9 @@ struct LibraryView: View {
                 ScanEntryRow(entry: entry)
                     .listRowBackground(Color(red: 0.1, green: 0.1, blue: 0.18))
                     .listRowSeparatorTint(Color.white.opacity(0.08))
-                    .onTapGesture { previewURL = entry.modelURL }
+                    .onTapGesture {
+                        previewURL = entry.modelURL
+                    }
                     .swipeActions(edge: .leading) {
                         Button {
                             ExportManager.shared.export(modelURL: entry.modelURL)
@@ -58,6 +86,14 @@ struct LibraryView: View {
                             Label("Export", systemImage: "square.and.arrow.up")
                         }
                         .tint(.blue)
+                        
+                        Button {
+                            newScanName = entry.name
+                            scanToRename = entry
+                        } label: {
+                            Label("Rename", systemImage: "pencil")
+                        }
+                        .tint(.orange)
                     }
             }
             .onDelete(perform: store.delete)

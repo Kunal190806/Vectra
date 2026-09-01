@@ -1,5 +1,6 @@
 import Foundation
 import RealityKit
+import SceneKit
 import Combine
 
 class PhotogrammetryManager {
@@ -24,22 +25,11 @@ class PhotogrammetryManager {
                           userInfo: [NSLocalizedDescriptionKey: "Input folder does not exist: \(inputFolder.path)"])
         }
 
-        // Check PhotogrammetrySession is supported on this device
+        // We strictly use the genuine Apple PhotogrammetrySession.
+        // If the device does not support it (e.g. Simulator or non-Pro iPhone), we throw a clear error.
         guard PhotogrammetrySession.isSupported else {
-            // On unsupported devices (simulator/older devices) simulate progress and return placeholder
-            for i in 1...10 {
-                try await Task.sleep(nanoseconds: 300_000_000)
-                progressHandler(Double(i) / 10.0)
-            }
-            // Create a placeholder file so the app doesn't crash
-            fileManager.createFile(atPath: outputURL.path, contents: Data(), attributes: nil)
-            return ReconstructionResult(
-                modelURL: outputURL,
-                processTime: Date().timeIntervalSince(startTime),
-                frameCount: 0,
-                success: true,
-                error: nil
-            )
+            throw NSError(domain: "PhotogrammetryManager", code: -11,
+                          userInfo: [NSLocalizedDescriptionKey: "Photogrammetry is not supported on this device. You need a device with a LiDAR scanner (e.g., iPhone Pro/iPad Pro) or an M-series Mac."])
         }
 
         var configuration = PhotogrammetrySession.Configuration()

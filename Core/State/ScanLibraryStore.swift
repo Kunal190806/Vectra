@@ -35,6 +35,22 @@ final class ScanLibraryStore: ObservableObject {
         save()
     }
 
+    func rename(entry: ScanEntry, to newName: String) {
+        if let idx = entries.firstIndex(where: { $0.id == entry.id }) {
+            let updated = ScanEntry(
+                id: entry.id,
+                name: newName,
+                date: entry.date,
+                modelURL: entry.modelURL,
+                thumbnailURL: entry.thumbnailURL,
+                frameCount: entry.frameCount,
+                durationSeconds: entry.durationSeconds
+            )
+            entries[idx] = updated
+            save()
+        }
+    }
+
     private func save() {
         if let data = try? JSONEncoder().encode(entries) {
             UserDefaults.standard.set(data, forKey: storageKey)

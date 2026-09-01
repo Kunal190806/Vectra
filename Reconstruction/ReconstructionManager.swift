@@ -23,6 +23,10 @@ final class ReconstructionManager: ObservableObject {
     @Published var finishedModelURL: URL? = nil
     @Published var errorMessage: String? = nil
 
+    @Published var requiresUserDecision: Bool = false
+    private var pendingFrames: [ScanFrame]? = nil
+    private var pendingPipeline: ReconstructionPipeline? = nil
+
     private var scanStartDate: Date = Date()
 
     /// Call this right before capture starts so we can track duration.
@@ -32,14 +36,28 @@ final class ReconstructionManager: ObservableObject {
         progress = 0
         finishedModelURL = nil
         errorMessage = nil
+        requiresUserDecision = false
+        pendingFrames = nil
+        pendingPipeline = nil
     }
 
     /// Starts reconstruction using frames already written to sessionURL by VideoCaptureManager.
-    func startReconstruction(with frames: [ScanFrame], using pipeline: ReconstructionPipeline) {
+    func startReconstruction(with frames: [ScanFrame], using pipeline: ReconstructionPipeline, bypassCheck: Bool = false) {
         guard let sessionURL = VideoCaptureManager.shared.currentScanSessionURL else {
             DispatchQueue.main.async {
                 self.phase = .failed
                 self.errorMessage = "No session directory found. Did you capture any frames?"
+            }
+            return
+        }
+        
+        // --- Low Data Check ---
+        // Minimum recommended for photogrammetry is typically ~20-30 frames.
+        if frames.count < 30 && !bypassCheck {
+            DispatchQueue.main.async {
+                self.pendingFrames = frames
+                self.pendingPipeline = pipeline
+                self.requiresUserDecision = true
             }
             return
         }
@@ -131,5 +149,22 @@ final class ReconstructionManager: ObservableObject {
         let df = DateFormatter()
         df.dateFormat = "MMM d, h:mm a"
         return df.string(from: Date())
+    }
+
+    // MARK: - User Decision Handlers
+
+    func resumeReconstruction() {
+        requiresUserDecision = false
+        if let f = pendingFrames, let p = pendingPipeline {
+            startReconstruction(with: f, using: p, bypassCheck: true)
+        }
+    }
+    
+    func cancelReconstruction() {
+        requiresUserDecision = false
+        pendingFrames = nil
+        pendingPipeline = nil
+        phase = .failed
+        errorMessage = "Reconstruction cancelled by user due to insufficient data."
     }
 }

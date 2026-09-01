@@ -127,6 +127,16 @@ struct ProcessingView: View {
             }
         }
         .navigationBarBackButtonHidden(true)
+        .alert("Not Enough Information", isPresented: $manager.requiresUserDecision) {
+            Button("Rescan (Cancel)", role: .cancel) {
+                manager.cancelReconstruction()
+            }
+            Button("Proceed Anyway") {
+                manager.resumeReconstruction()
+            }
+        } message: {
+            Text("This scan doesn't have enough frames (info) for a high-quality 3D model. Do you want to rescan it or try reconstructing it anyway?")
+        }
     }
 
     private var phaseIcon: String {

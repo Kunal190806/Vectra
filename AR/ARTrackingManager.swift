@@ -45,6 +45,9 @@ class ARTrackingManager: NSObject, ObservableObject {
 
 extension ARTrackingManager: ARSessionDelegate {
     func session(_ session: ARSession, didUpdate frame: ARFrame) {
+        // Pass frame to VideoCaptureManager to be processed and potentially saved if capturing
+        VideoCaptureManager.shared.processFrame(frame)
+        
         DispatchQueue.main.async {
             self.trackingState = frame.camera.trackingState
             self.currentTransform = frame.camera.transform
