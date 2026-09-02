@@ -142,6 +142,10 @@ struct ProcessingView: View {
     private var phaseIcon: String {
         switch manager.phase {
         case .idle, .preparing:    return "cube.transparent"
+        case .cloudZipping:        return "doc.zipper"
+        case .cloudUpload:         return "icloud.and.arrow.up"
+        case .cloudProcess:        return "server.rack"
+        case .cloudDownload:       return "icloud.and.arrow.down"
         case .processing:          return "cpu"
         case .saving:              return "arrow.down.circle"
         case .done:                return "checkmark.circle"
@@ -151,8 +155,8 @@ struct ProcessingView: View {
 
     private func stepActive(_ step: String) -> Bool {
         switch step {
-        case "Prep":        return manager.phase == .preparing
-        case "Reconstruct": return manager.phase == .processing
+        case "Prep":        return manager.phase == .preparing || manager.phase == .cloudZipping
+        case "Reconstruct": return manager.phase == .processing || manager.phase == .cloudUpload || manager.phase == .cloudProcess || manager.phase == .cloudDownload
         case "Save":        return manager.phase == .saving || manager.phase == .done
         default:            return false
         }
